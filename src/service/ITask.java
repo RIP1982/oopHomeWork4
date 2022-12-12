@@ -8,13 +8,13 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 
-public interface ITask {
-    Task createTask() throws ParseException;
-    Task removeTask(ArrayList<Task> tasks);
+public interface ITask <T extends Task>{
+    T createTask() throws ParseException;
+    T removeTask(ArrayList<T> tasks);
 
-    Scheduler showAllTasks(ArrayList<Task> tasks) throws ParseException;
+    Scheduler showAllTasks(ArrayList<T> tasks) throws ParseException;
 
-    void writeToCsv(ArrayList<Task> tasks) throws IOException;
+    void writeToCsv(ArrayList<T> tasks) throws IOException;
 
-    Task showTaskById(ArrayList<Task> tasks);
+    T showTaskById(ArrayList<T> tasks);
 }

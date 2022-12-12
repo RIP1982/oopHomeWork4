@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-public class TaskService implements ITask {
+public class TaskService implements ITask<Task> {
     @Override
     public Task createTask() throws ParseException {
         try {
